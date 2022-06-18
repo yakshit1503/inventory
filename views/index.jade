@@ -1,0 +1,23 @@
+extends layout
+
+block content
+
+  head
+     title Automobiles Inventory
+  body
+    .container
+      .row
+        .col-md-12
+          h1 Automobile Inventory
+      .row 
+        .col-md-12
+          select#auto-type.form-select
+            option(value='car') Cars
+            option(value='bike') Bikes
+        div
+          .row
+            .col-md-12
+              button#submit-btn.btn.btn-primary(onclick='getInventoryList()') Get automobiles list
+            div
+              div
+              table#resultTable.table.table-striped
